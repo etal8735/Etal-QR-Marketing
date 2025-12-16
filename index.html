@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>EtAl Store Summary</title>
+<style>
+    body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; }
+    h1 { color: #333; }
+    a { color: #0000EE; }
+</style>
+</head>
+<body>
+<h1>Welcome to EtAl Store</h1>
+<p>Our unique online boutique is your source for chic and contemporary high quality fashion. We’re committed to offering luxury at affordable prices to our customers, making it possible to find and own unique and stylish items, without breaking the bank!</p>
+
+<p>We are known for our high impact bold prints, our beaded masterpieces, exquisite paintings and other opulent items from tribes found in various parts of Africa.</p>
+
+<h3>Visit us on social media:</h3>
+<p><a href="https://www.instagram.com/etalstore/" target="_blank">www.instagram.com/etalstore/</a></p>
+
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>QR Code for Existing Page</title>
+
+<style>
+  body{font-family:Arial,Helvetica,sans-serif;text-align:center;padding-top:4rem;}
+  #qr{margin-top:2rem;}
+</style>
+</head>
+<body>
+
+<h1>Scan the QR to open an existing page</h1>
+<p id="description">Your target URL will appear here.</p>
+
+<div id="qr"></div>
+
+<!-- Load the small, MIT‑licensed qrcode.js library -->
+<script src="https://cdn.jsdelivr.net/npm/qrcode@1.5.3/build/qrcode.min.js"></script>
+
+<script>
+  /* ---------- CONFIGURATION ----------
+     • TARGET_URL – change this to whatever page you want the QR to point at.
+     • SIZE        – pixel width/height of the generated code.
+     • ERROR_CORR  – error‑correction level: L, M, Q, H (H is most resilient).
+  -------------------------------------*/
+  const TARGET_URL   = "https://etal.html.txt"; // <-- edit this!
+  const SIZE         = 200;
+  const ERROR_CORR   = QRCode.CorrectLevel.H;
+
+  // Show the URL in the page so you can verify it
+  document.getElementById('description').textContent =
+      `QR Code will link to: ${TARGET_URL}`;
+
+  // Render the QR code into <div id="qr">
+  new QRCode(document.getElementById("qr"), {
+    text: TARGET_URL,
+    width: SIZE,
+    height: SIZE,
+    colorDark : "#000",
+    colorLight : "#fff",
+    correctLevel : ERROR_CORR
+  });
+</script>
+
+</body>
+</html>
+
