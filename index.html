@@ -5,6 +5,21 @@
     
 <title>EtAl Store Summary</title>
 <style>
+  :root {
+    --base-size: 1rem;          /* 16 px by default */
+  }
+
+  @media (min-width: 600px) {
+    :root { --base-size: 1.125rem; }   /* ~18 px on tablets */
+  }
+  
+  @media (min-width: 900px) {
+    :root { --base-size: 1.25rem; }    /* ~20 px on desktops */
+  }
+
+  body { font-size: var(--base-size); }
+</style>
+<style>
     body { font-family: Arial, sans-serif; line-height: 1.6; margin: 40px; }
     h1 { color: #333; }
     a { color: #0000EE; }
@@ -74,6 +89,7 @@ To sign up for future store events, promotions, and discounts text JOIN to (833)
 
 </body>
 </html>
+
 
 
 
